@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "sDi6qn0XMHk=",
+  "success": true,
+  "projectFilePath": "/home/mani/Projects/Open Source Contrib/DotNetCleanTemplate/DotNetCleanTemplate.csproj",
+  "expectedPackageFiles": [
+    "/home/mani/.nuget/packages/microsoft.aspnetcore.openapi/9.0.4/microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
+    "/home/mani/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512",
+    "/home/mani/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.4/microsoft.aspnetcore.app.ref.9.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

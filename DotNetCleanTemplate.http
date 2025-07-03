@@ -1,0 +1,6 @@
+@DotNetCleanTemplate_HostAddress = http://localhost:5017
+
+GET {{DotNetCleanTemplate_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
