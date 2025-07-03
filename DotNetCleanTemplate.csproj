@@ -7,7 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.6" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.12.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Source\Domain\Entities\" />
+    <Folder Include="Source\Infrastructure\Utils\" />
+    <Folder Include="Source\Presentation\Contracts\Requests\" />
+    <Folder Include="Source\Presentation\Contracts\Responses\" />
+    <Folder Include="Source\Presentation\Controllers\" />
+    <Folder Include="Source\Persistence\Repositories\Interfaces\" />
+    <Folder Include="Source\Domain\Services\Interfaces\" />
   </ItemGroup>
 
 </Project>
