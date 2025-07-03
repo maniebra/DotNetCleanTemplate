@@ -1,4 +1,4 @@
-namespace DotNetCleanTemplate.Source.Infrastructure.DI.Interfaces;
+namespace DotNetCleanTemplate.Source.Infrastructure.Utils.Interfaces;
 
 public interface IPasswordUtil
 {

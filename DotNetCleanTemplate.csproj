@@ -15,12 +15,10 @@
 
   <ItemGroup>
     <Folder Include="Source\Domain\Entities\" />
-    <Folder Include="Source\Infrastructure\Utils\" />
     <Folder Include="Source\Presentation\Contracts\Requests\" />
     <Folder Include="Source\Presentation\Contracts\Responses\" />
     <Folder Include="Source\Presentation\Controllers\" />
     <Folder Include="Source\Persistence\Repositories\Interfaces\" />
-    <Folder Include="Source\Domain\Services\Interfaces\" />
   </ItemGroup>
 
 </Project>

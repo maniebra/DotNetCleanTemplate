@@ -1,8 +1,9 @@
-using DotNetCleanTemplate.Source.Infrastructure.DI.Interfaces;
+using DotNetCleanTemplate.Source.Infrastructure.Utils;
+using DotNetCleanTemplate.Source.Infrastructure.Utils.Interfaces;
 
 namespace DotNetCleanTemplate.Source.Infrastructure.DI;
 
-public class AppModule
+public static class AppModule
 {
     public static WebApplicationBuilder RegisterUtils(WebApplicationBuilder builder)
     {

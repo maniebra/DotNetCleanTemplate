@@ -1,7 +1,6 @@
-using DotNetCleanTemplate.Source.Infrastructure.DI.Interfaces;
-using BCrypt.Net;
+using DotNetCleanTemplate.Source.Infrastructure.Utils.Interfaces;
 
-namespace DotNetCleanTemplate.Source.Infrastructure.DI;
+namespace DotNetCleanTemplate.Source.Infrastructure.Utils;
 
 public class PasswordUtil : IPasswordUtil
 {

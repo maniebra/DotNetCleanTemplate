@@ -1,12 +1,12 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using DotNetCleanTemplate.Source.Infrastructure.DI.Interfaces;
 using DotNetCleanTemplate.Source.Infrastructure.Options;
+using DotNetCleanTemplate.Source.Infrastructure.Utils.Interfaces;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace DotNetCleanTemplate.Source.Infrastructure.DI;
+namespace DotNetCleanTemplate.Source.Infrastructure.Utils;
 
 public sealed class JwtUtil : IJwtUtil
 {
