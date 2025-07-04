@@ -1,3 +1,8 @@
 .idea/
 .vs-code/
 DS-store
+
+obj/
+bin/
+
+**/*.env

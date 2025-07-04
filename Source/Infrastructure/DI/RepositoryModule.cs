@@ -7,7 +7,7 @@ public static class RepositoryModule
     /// </summary>
     /// <param name="builder">web application builder</param>
     /// <returns>A web application builder with your repositories.</returns>
-    public static WebApplicationBuilder RegisterRepositories(WebApplicationBuilder builder)
+    public static WebApplicationBuilder RegisterRepositories(this WebApplicationBuilder builder)
     {
         // repos go here
         

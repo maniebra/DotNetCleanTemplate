@@ -5,7 +5,7 @@ namespace DotNetCleanTemplate.Source.Infrastructure.DI;
 
 public static class ServiceModule
 {
-    public static WebApplicationBuilder RegisterServices(WebApplicationBuilder builder)
+    public static WebApplicationBuilder RegisterServices(this WebApplicationBuilder builder)
     {
         builder.Services.AddScoped<IAuthService, AuthService>();
         return builder;
