@@ -25,7 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Source\Infrastructure\Commons\Documentation\" />
     <Folder Include="Source\Infrastructure\Commons\Exceptions\" />
     <Folder Include="Source\Presentation\Contracts\Requests\" />
     <Folder Include="Source\Presentation\Contracts\Responses\" />
