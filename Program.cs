@@ -10,3 +10,4 @@ builder.RegisterRepositories();
 builder.RegisterServices();
 
 builder.Build().UseAppOptions().Run();
+

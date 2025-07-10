@@ -4,5 +4,5 @@ namespace DotNetCleanTemplate.Source.Domain.Services;
 
 public class AuthService : IAuthService
 {
-    
+   
 }

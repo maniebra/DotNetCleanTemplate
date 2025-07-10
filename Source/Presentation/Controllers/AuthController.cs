@@ -1,3 +1,4 @@
+using DotNetCleanTemplate.Source.Infrastructure.Commons.Generics;
 using DotNetCleanTemplate.Source.Presentation.Contracts.Requests.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +18,7 @@ public class AuthController : ControllerBase
     [AllowAnonymous]
     public async Task<IActionResult> HealthCheck()
     {
-        return Ok(new { message = "working" });
+        return Ok(value: ResponseTemplate.MessageOnlyResponse("It's working"));
     }
 
     /// <summary>
@@ -27,7 +28,8 @@ public class AuthController : ControllerBase
     [ProducesResponseType(200)]
     [ProducesResponseType(400)]
     [AllowAnonymous]
-    public async Task<IActionResult> RegisterUser([FromBody] RegisterUserRequest request) {
-        return Ok(new { message = "working"} );
+    public async Task<IActionResult> RegisterUser([FromBody] RegisterUserRequest request)
+    {
+        return Ok(value: ResponseTemplate.SuccessResponse("working", request));
     }
 }
