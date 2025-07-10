@@ -1,6 +1,7 @@
 using DotNetCleanTemplate.Source.Domain.Entities.Auth;
 using DotNetCleanTemplate.Source.Infrastructure.Commons.Generics;
 using DotNetCleanTemplate.Source.Persistence.DbContexts;
+using DotNetCleanTemplate.Source.Persistence.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace DotNetCleanTemplate.Source.Infrastructure.Repositories;
@@ -39,6 +40,13 @@ public class UserRepository : RepositoryBase<User>, IUserRepository
         return await _dbSet
             .AsNoTracking()
             .FirstOrDefaultAsync(u => u.Id == id);
+    }
+
+    public async Task<User?> GetUserByUsername(string username)
+    {
+        return await _dbSet
+            .AsNoTracking()
+            .FirstOrDefaultAsync(u => u.Username == username);
     }
 
     public async Task<User?> UpdateUserById(Guid id, User updatedUser)

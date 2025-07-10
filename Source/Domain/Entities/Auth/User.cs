@@ -30,11 +30,11 @@ public class User
     public required DateTime CreatedAt { get; init; }
 
     [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-    public required DateTime? UpdatedAt { get; set; }
+    public DateTime? UpdatedAt { get; set; } = null;
 
-    public required Boolean IsAdmin  { get; set; } = false;
-    public required Boolean IsStaff  { get; set; } = false;
-    public required Boolean IsBanned { get; set; } = false;
+    public Boolean IsAdmin  { get; set; } = false;
+    public Boolean IsStaff  { get; set; } = false;
+    public Boolean IsBanned { get; set; } = false;
 
     public static void Configure(EntityTypeBuilder<User> b)
     {

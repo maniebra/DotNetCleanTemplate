@@ -1,3 +1,4 @@
+using DotNetCleanTemplate.Source.Domain.Services.Interfaces;
 using DotNetCleanTemplate.Source.Infrastructure.Commons.Generics;
 using DotNetCleanTemplate.Source.Presentation.Contracts.Requests.User;
 using Microsoft.AspNetCore.Authorization;
@@ -9,6 +10,10 @@ namespace DotNetCleanTemplate.Source.Presentation.Controllers;
 [Route("/api/auth")]
 public class AuthController : ControllerBase
 {
+    private readonly IAuthService _authService;
+
+    public AuthController(IAuthService authService) => this._authService = authService;
+
     /// <summary>
     /// A health check service
     /// </summary>
@@ -25,11 +30,22 @@ public class AuthController : ControllerBase
     /// Register a new user
     /// </summary>
     [HttpPost("register")]
-    [ProducesResponseType(200)]
+    [ProducesResponseType(typeof(RegisterUserResponse), 200)]
     [ProducesResponseType(400)]
     [AllowAnonymous]
     public async Task<IActionResult> RegisterUser([FromBody] RegisterUserRequest request)
     {
-        return Ok(value: ResponseTemplate.SuccessResponse("working", request));
+        var registerResult = await _authService.RegisterUser(
+            request.username,
+            request.password,
+            request.email,
+            request.firstName,
+            request.lastName);
+
+        if (registerResult.IsSuccess) return Ok(ResponseTemplate.SuccessResponse("New user has been registered.", RegisterUserResponse.FromUser(registerResult.Value)));
+
+        return BadRequest(ResponseTemplate.ErrorResponse(
+            registerResult.ErrorMessage ?? "Something went wrong!",
+            registerResult.Error));
     }
 }

@@ -12,6 +12,9 @@ public class RegisterUserRequest {
     [Example("john.doe@gmail.com")]
     public required string email { get; init; }
 
-    [Example("+1109823212")]
-    public string? phone_number { get; init; } = null;
+    [Example("John")]
+    public required string firstName { get; init; }
+
+    [Example("Doe")]
+    public required string lastName { get; init; }
 }

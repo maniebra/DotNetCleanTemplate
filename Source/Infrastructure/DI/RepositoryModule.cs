@@ -1,3 +1,6 @@
+using DotNetCleanTemplate.Source.Infrastructure.Repositories;
+using DotNetCleanTemplate.Source.Persistence.Repositories.Interfaces;
+
 namespace DotNetCleanTemplate.Source.Infrastructure.DI;
 
 public static class RepositoryModule
@@ -10,6 +13,7 @@ public static class RepositoryModule
     public static WebApplicationBuilder RegisterRepositories(this WebApplicationBuilder builder)
     {
         // repos go here
+        builder.Services.AddScoped<IUserRepository, UserRepository>();
         
         return builder;
     }

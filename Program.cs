@@ -1,6 +1,8 @@
 using DotNetCleanTemplate.Source.Infrastructure.DI;
 using DotNetCleanTemplate.Source.Infrastructure.Options;
 
+DotNetEnv.Env.Load();
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.UseBuilderOptions();

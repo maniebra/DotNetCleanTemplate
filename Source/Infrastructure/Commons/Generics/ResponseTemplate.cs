@@ -9,7 +9,7 @@ public static class ResponseTemplate
         extensions = extensions
     };
 
-    public static Object? ErrorResponse(string message, string? errorDetails = null) => new
+    public static Object? ErrorResponse(string message, object? errorDetails = null) => new
     {
         message = message,
         errorDetails = errorDetails
