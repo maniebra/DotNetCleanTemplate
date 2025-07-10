@@ -48,4 +48,19 @@ public class AuthController : ControllerBase
             registerResult.ErrorMessage ?? "Something went wrong!",
             registerResult.Error));
     }
+
+    [HttpPost("login")]
+    [ProducesResponseType(200)]
+    [ProducesResponseType(403)]
+    [AllowAnonymous]
+    public async Task<IActionResult> LoginUser([FromBody] LoginUserRequest request)
+    {
+        var loginRequest = await _authService.LoginUser(request.username, request.password);
+
+        if (loginRequest.IsSuccess) return Ok(ResponseTemplate.SuccessResponse("Login successful", loginRequest.Value));
+
+        return Unauthorized(ResponseTemplate.ErrorResponse(
+                loginRequest.ErrorMessage ?? "There is no account with this username and password",
+                loginRequest.Error));
+    }
 }
