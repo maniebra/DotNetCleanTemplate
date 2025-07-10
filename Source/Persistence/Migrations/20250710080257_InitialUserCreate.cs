@@ -15,7 +15,7 @@ namespace DotNetCleanTemplate.Source.Persistence.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Username = table.Column<string>(type: "character varying(64)", maxLength: 64, nullable: false),
                     Password = table.Column<string>(type: "text", nullable: false),
                     FirstName = table.Column<string>(type: "character varying(64)", maxLength: 64, nullable: false),
@@ -29,7 +29,7 @@ namespace DotNetCleanTemplate.Source.Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.id);
+                    table.PrimaryKey("PK_Users", x => x.Id);
                 });
 
             migrationBuilder.CreateIndex(

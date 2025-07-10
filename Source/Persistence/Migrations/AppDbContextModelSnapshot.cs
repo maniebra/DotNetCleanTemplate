@@ -24,7 +24,7 @@ namespace DotNetCleanTemplate.Source.Persistence.Migrations
 
             modelBuilder.Entity("DotNetCleanTemplate.Source.Domain.Entities.Auth.User", b =>
                 {
-                    b.Property<Guid>("id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
@@ -69,7 +69,7 @@ namespace DotNetCleanTemplate.Source.Persistence.Migrations
                         .HasMaxLength(64)
                         .HasColumnType("character varying(64)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.HasIndex("Email")
                         .IsUnique();

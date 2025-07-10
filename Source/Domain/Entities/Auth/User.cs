@@ -9,7 +9,7 @@ public class User
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
-    public required Guid id { get; init; } = new Guid();
+    public required Guid Id { get; init; } = new Guid();
 
     [Required, MaxLength(64)]
     public required string Username { get; set; }
