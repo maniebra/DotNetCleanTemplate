@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Mani Ebrahimi",
+  "classifications": [ "WebAPI", "Clean Architecture", "DotNet" ],
+  "identity": "DotNetCleanTemplate.CleanApi",
+  "name": "DotNet Clean API Template",
+  "shortName": "cleanapi",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "DotNetCleanTemplate",
+  "preferNameDirectory": true,
+  "guids": [
+    "d3b1ce1a-bc32-4a3e-bb33-7c1b79b32821",
+    "2fbd72fc-3952-4ea2-9525-ec14ffcd89b9"
+  ],
+  "symbols": {
+    "ProjectName": {
+      "type": "parameter",
+      "datatype": "text",
+      "defaultValue": "DotNetCleanTemplate",
+      "replaces": "DotNetCleanTemplate"
+    }
+  }
+}
